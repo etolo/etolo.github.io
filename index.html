@@ -1,0 +1,274 @@
+﻿<!-- Copyright Eero Tölö, all rights reserved.   -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: lightblue;
+  background-image: linear-gradient(120deg, lightblue, whitesmoke);
+}
+
+h1 {
+  color: mediumpurple;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 16px;
+}
+
+img {
+    image-orientation: from-image;
+}
+
+ul.a {
+  list-style-position: outside;
+  line-height: 100%;
+}
+
+.header {
+  background-color: whitesmoke;
+  padding: 60px;
+  height: 240px
+  text-align: center;
+  background-position: 100% 60%;
+  background-image: url(topbar2.jpg);
+
+}
+
+</style>
+
+</head>
+<title>
+Eero Tölö - GitHub Page
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p22").click(function(){
+    alert();
+    $('#dialog').dialog('open');
+    $('#dialog').html("<img src='email.png' alt='failed - try LinkedIn'>");
+  });
+});
+</script>
+
+<script>
+function loadDoc() {
+      document.getElementById("email").innerHTML = "Contact: <img src='email.png' alt='failed - try LinkedIn'>";
+    }
+</script>
+<style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<div class="header">
+<img src='pic.jpg' alt='failed - try LinkedIn' style="max-height:120px;" align='right' class="rotate90">
+<h1>Welcome to Eero Tölö's GitHub page</h1> 
+
+
+
+<div id="email">
+Contact: <button type="button" onclick="loadDoc()">Click to show e-mail address</button>
+</div>
+
+</div>
+<p>
+I recently started as Senior Advisor in the Norwegian Ministry of Finance. Here I mainly deal with usage and further development of the new DSGE model for Fiscal Policy analysis (see here: <a href="https://doi.org/10.1016/j.econmod.2020.07.017">https://doi.org/10.1016/j.econmod.2020.07.017</a>). Related work and policy papers may appear below under the heading "Economics / modelling".
+</p>
+
+<h2>My codes: (Python, Matlab, SQL, Excel VBA, Stata, java, Kotlin, Fortran 90)</h2> 
+<ul class="a">
+<h4>Research codes: (Python, Matlab, SQL, Excel VBA, Stata, Fortran 90)</h4>
+  <li>If you are looking for a code related to particular research paper. Check whether the link to code is included next to the paper in the research project list below. If it's not there, do not hesitate to contact me as it may be available for sharing.</li>
+<h4>Other codes that may be available: (Python, Kotlin/Java, SQL)</h4>
+  <li>Code cheat sheets</li>
+  <u>Python:</u>
+  <li>Web crawler for used cars in Norway (you need to fit your own pricing model; outside Norway needs to be accommodate to your used local car sales website)</li>
+  <li>Web crawler and heat-map for apartments in Norway (same thing, <p2 id="myImg" alt="Snow" data-text="aa" style="width:100%;max-width:300px"><u>click here</u></p2> for screenshot)</li>
+  <u>Kotlin:</u>
+  <li>Android codes (TBA): integration with WordPress, push notifications</li>
+</ul>
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "heatmap.jpg";
+  captionText.innerHTML = "Apartments for sale on dynamic heat map";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+<h2>My research projects (on-going and finished):</h2>
+
+<h3>More articles (including some non-scholarly texts) are available through my <a href="https://scholar.google.com/citations?user=9hDm_PQAAAAJ">Google Scholar profile</a></h3>
+
+<h3>Alternative links to scholarly articles available in my <a href="https://www.mendeley.com/profiles/eero-tolo/">Mendeley profile</a></h3>
+
+<h3>Economics / modelling:</h3>
+<ul class="a">
+  <li>Corporate tax paper (working title, expected available 2020-21), jointly with Thomas Brasch and Ivan Frankovic</li>
+</ul>
+
+<h3>Data science / econometrics / statistics:</h3>
+<ul class="a">
+<h4>Money market:</h4>
+  <li>Tölö, E., Jokivuolle, E., Virén, M., 2017, Do banks&#39; overnight borrowing rates lead their CDS Price? <i>Journal of Financial Intermediation</i>, Vol. 31, pp. 93–106. Available at: <a href="https://dx.doi.org/10.1016/j.jfi.2017.05.006">https://dx.doi.org/10.1016/j.jfi.2017.05.006<a/></li><br>
+  <li>Tölö, E., Jokivuolle, E., Virén, M., Has Banks’ Monitoring of other Banks Strengthened Post-crisis? Evidence from the European Overnight Market (submitted). Working paper available at: <a href="http://urn.fi/URN:NBN:fi:bof-201909251502">http://urn.fi/URN:NBN:fi:bof-201909251502<a/></li>
+<h4>Crises:</h4>
+  <li>Tölö, E., 2020, Predicting financial crises with recurrent neural networks, <i>Journal of Financial Stability</i>, Volume 49, August 2020, 100746. Available at: <a href="https://doi.org/10.1016/j.jfs.2020.100746">https://doi.org/10.1016/j.jfs.2020.100746<a/></li><br>
+  <li>Tölö, E., Laakkonen, H., Kalatie, S., 2018, Indicators used in setting the countercyclical capital buffer, <i>International Journal of Central Banking</i>, Vol. 14, No. 2, pp. 51–111. Available at: <a href="https://www.ijcb.org/journal/ijcb18q1a2.htm">https://www.ijcb.org/journal/ijcb18q1a2.htm<a/></li><br>
+  <li>Virtanen, T., Tölö, E., Virén, M., Taipalus, K., 2018, Can bubble theory foresee financial crises? <i>Journal of Financial Stability</i>, Vol. 36, pp. 66–81. Available at: <a href="https://dx.doi.org/10.1016/j.jfs.2018.02.008">https://dx.doi.org/10.1016/j.jfs.2018.02.008<a/></li><br>
+  <li>Kauko, K., Tölö, E., 2020, On the Long-Run Calibration of the Credit-to-GDP Gap as a Banking Crisis Predictor, <i>Finnish Economic Papers</i> (forthcoming). Working paper available at: <a href="http://urn.fi/URN:NBN:fi:bof-201902251071">http://urn.fi/URN:NBN:fi:bof-201902251071<a/></li><br>
+  <li>Kauko, K., Tölö, E., 2020, Crisis prediction with differenced relative credit, <i>Applied Economics Quarterly</i> (forthcoming). Working paper available at: <a href="http://urn.fi/URN:NBN:fi:bof-201906061225">http://urn.fi/URN:NBN:fi:bof-201906061225<a/></li><br>
+<!--  <li>Lang, J. H., Pirovano, M., Ilbas, P., Van Niewenhuyze, C., Metiu, N., Galán, J., Tölö, E., Juselius, M., Couailler, C., Fiori, R., Moscatelli, M., Karmelavicius, J., Pereira, A., Rünstler, G., Consolo, A., Welz, P., 2019, Cyclical systemic risk measurement, European Systemic Risk Board Occasional Paper Series (forthcoming).</li>-->
+<h4>Banking:</h4>
+  <li>Tölö, E., Miettinen, P., 2018, How do shocks to bank capital affect lending and growth? Working paper available at:<a href="http://urn.fi/URN:NBN:fi:bof-201811282145">http://urn.fi/URN:NBN:fi:bof-201811282145<a/></li><br>
+  <li>Non-performing loans in Europe (working title, expected available 2020-21), jointly with Matti Viren</li><br>
+</ul>
+
+
+<h3>Molecular biology / Genetics:</h3>
+<ul class="a">
+  <li>TBA</li>
+</ul>
+
+<h3>Particle physics:</h3>
+<ul class="a">
+  <li>Drut, J, Lähde, T. A., Tölö, E., 2010, Graphene: from materials science to particle physics, <i>Proceedings of Science</i>, 105.Available at: <a href="https://dx.doi.org/10.22323/1.105.0006">https://dx.doi.org/10.22323/1.105.0006<a/></li>
+</ul>
+
+<h3>Quantum computing / quantum dots:</h3>
+<ul class="a">
+  <li>Tölö, E. Harju, A., 2010, Reduced density-matrix functional theory in quantum Hall systems, <i>Physical Review</i>, B 81, 075321. Available at: <a href="https://dx.doi.org/10.1103/PhysRevB.81.075321">https://dx.doi.org/10.1103/PhysRevB.81.075321<a/></li><br>
+  <li>Saarikoski, H., Tölö, E., Harju, A., Räsänen, E., 2008, Pfaffian and fragmented states at ν = 5⁄2 in quantum Hall droplets, <i>Physical Review</i>, B 78, 195321. Available at: <a href="https://dx.doi.org/10.1103/PhysRevB.78.195321">https://dx.doi.org/10.1103/PhysRevB.78.195321<a/></li><br>
+  <li>Tölö, E., Harju, A., 2009, Effects of thickness in quantum dots in strong magnetic fields, <i>Physical Review</i>, B 79, 075301. Available at: <a href="https://dx.doi.org/10.1103/PhysRevB.79.075301">https://dx.doi.org/10.1103/PhysRevB.79.075301<a/></li><br>
+  <li>Tölö, E., Harju, A., 2010, Optimal confinement potential in quantum Hall droplets, <i>Physica</i>, E 42, 1050. Available at: <a href="https://dx.doi.org/10.1016/j.physe.2009.10.031">https://dx.doi.org/10.1016/j.physe.2009.10.031<a/></li><br> 
+  <li>Bårdsen, G., Tölö, E., Harju, A., 2009, Magnetism in tunable quantum rings, <i>Physical Review</i>, B 80, 205308. Available at: <a href="https://dx.doi.org/10.1103/PhysRevB.80.205308">https://dx.doi.org/10.1103/PhysRevB.80.205308<a/></li><br>
+  <li>Tölö, E., Harju, A., 2009, Quantum Hall droplet laterally coupled to a quantum ring, <i>Physical Review</i>, B 80, 045303. Available at: <a href="https://dx.doi.org/10.1103/PhysRevB.80.045303">https://dx.doi.org/10.1103/PhysRevB.80.045303<a/></li><br>
+  <li>Hancock, Y., Suorsa, J., Tölö, E., Harju, A., 2008, Fractional periodicity and magnetism of extended quantum rings, <i>Physical Review</i>, B 77, 155103. Available at: <a href="https://dx.doi.org/10.1103/PhysRevB.77.155103">https://dx.doi.org/10.1103/PhysRevB.77.155103<a/></li><br>
+  <li>Tölö, E., Suorsa, J., Harju, A., Two interacting electrons in a square quantum dot, <i>Physica</i>, E 40, 1038 (2007). Available at: <a href="https://doi.org/10.1016/j.physe.2007.09.133">https://doi.org/10.1016/j.physe.2007.09.133<a/></li><br></li><br>
+</ul>
+
+</body>
+</html>
